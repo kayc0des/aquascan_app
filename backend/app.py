@@ -5,8 +5,9 @@ import tensorflow as tf
 
 app = FastAPI()
 
+model_filepath = "backend/model/model.h5"
 # Load the trained model
-model = tf.keras.models.load_model('model.h5')
+model = tf.keras.models.load_model(model_filepath)
 
 # Mean and standard deviation for normalization
 mean = np.array([7.08079450e+00, 1.96369496e+02, 2.20140925e+04, 7.12227679e+00,
