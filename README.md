@@ -1,5 +1,27 @@
 # AquaScan
 
+## Table of Contents
+
+1. [Overview of the Project](#overview-of-the-project)
+2. [Problem Statement](#problem-statement)
+3. [The Dataset](#the-dataset)
+4. [The Solution](#the-solution)
+5. [Architecture of the Model](#architecture-of-the-model)
+6. [Performance Analysis](#performance-analysis)
+7. [Why We Chose Our Model](#why-we-chose-our-model)
+8. [Libraries and Frameworks](#libraries-and-frameworks)
+9. [FastAPI](#fastapi)
+10. [React Frontend](#react-frontend)
+11. [Prerequisites](#prerequisites)
+12. [Get Started](#get-started)
+13. [Usage Examples](#usage-examples)
+14. [Deployment Instructions](#deployment-instructions)
+15. [Contributing](#contributing)
+16. [Authors/Contributors](#authorscontributors)
+17. [License](#license)
+18. [Future Work and Improvements](#future-work-and-improvements)
+19. [References](#references)
+
 ## Overview of the Project
 
 AquaScan is a cutting-edge application designed to predict water quality, ensuring access to clean and safe water for all. Utilizing a machine learning model built with TensorFlow, AquaScan leverages a FastAPI backend and a React frontend to deliver real-time predictions on water potability based on various water quality parameters.
@@ -55,6 +77,25 @@ Performance statistics:
 - Loss: 0.5948
 - Validation Accuracy: 0.6585
 - Validation Loss: 0.6135
+
+## Why We Chose Our Model
+
+### Model Selection
+
+We chose a Multi-Layer Perceptron (MLP) Neural Network for AquaScan due to its ability to handle complex relationships between features and target variables. MLPs are particularly effective for classification problems where the input data is not linearly separable, as is the case with water quality parameters.
+
+### Why It Worked
+
+1. **Handling Non-Linearity**: The ReLU activation function in the hidden layers allows the model to capture non-linear relationships between the input features, which are crucial for predicting water potability.
+
+2. **Feature Interactions**: MLPs can automatically discover interactions between features, which is essential given the multifaceted nature of water quality data.
+
+3. **Regularization Techniques**: By incorporating L2 regularization, early stopping, and dropout, we effectively reduced overfitting, ensuring the model generalizes well to unseen data.
+
+4. **Optimization**: The Adam optimizer, known for its efficiency and adaptability, helped in achieving faster convergence during training.
+
+5. **Binary Classification**: The Sigmoid activation function in the output layer ensures that the predictions are in the form of probabilities, suitable for binary classification tasks like determining water potability.
+
 
 ## Libraries and Frameworks
 
