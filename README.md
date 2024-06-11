@@ -18,9 +18,6 @@
 14. [Deployment Instructions](#deployment-instructions)
 15. [Contributing](#contributing)
 16. [Authors/Contributors](#authorscontributors)
-17. [License](#license)
-18. [Future Work and Improvements](#future-work-and-improvements)
-19. [References](#references)
 
 ## Overview of the Project
 
