@@ -165,6 +165,48 @@ https://aquascan.onrender.com/predict
 
 The endpoint will return a prediction of the potability.
 
+### Alternatively using Curl
+
+```
+curl -X POST https://aquascan.onrender.com/predict \
+     -H "Content-Type: application/json" \
+     -d '{
+           "ph": 7.1252110755305536,
+           "Hardness": 209.7467711974657,
+           "Solids": 16701.56597534472,
+           "Chloramines": 7.458741450053704,
+           "Sulfate": 320.50094487053195,
+           "Conductivity": 404.7045963253844,
+           "Organic_carbon": 18.9527967341603,
+           "Trihalomethanes": 92.34737526315507,
+           "Turbidity": 3.9080753459125
+         }'
+```
+
+### Using Python Request
+
+```
+import requests
+
+url = "https://aquascan.onrender.com/predict"
+data = {
+    "ph": 7.1252110755305536,
+    "Hardness": 209.7467711974657,
+    "Solids": 16701.56597534472,
+    "Chloramines": 7.458741450053704,
+    "Sulfate": 320.50094487053195,
+    "Conductivity": 404.7045963253844,
+    "Organic_carbon": 18.9527967341603,
+    "Trihalomethanes": 92.34737526315507,
+    "Turbidity": 3.9080753459125
+}
+
+response = requests.post(url, json=data)
+print(response.status_code)
+print(response.json())
+
+```
+
 ## Authors/Contributors
 
 AquaScan was developed by:
