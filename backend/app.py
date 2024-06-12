@@ -9,6 +9,7 @@ app = FastAPI()
 origins = [
     "https://localhost",
     "https://loalhost:8080",
+    "https://localhost:3000",
     "https://aquascan.onrender.com"
 ]
 
