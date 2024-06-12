@@ -1,5 +1,9 @@
 # AquaScan
 
+## Overview of the Project
+
+AquaScan is a cutting-edge application designed to predict water quality, ensuring access to clean and safe water for all. Utilizing a machine learning model built with TensorFlow, AquaScan leverages a FastAPI backend and a React frontend to deliver real-time predictions on water potability based on various water quality parameters.
+
 ## Table of Contents
 
 1. [Overview of the Project](#overview-of-the-project)
@@ -19,17 +23,13 @@
 15. [Contributing](#contributing)
 16. [Authors/Contributors](#authorscontributors)
 
-## Overview of the Project
-
-AquaScan is a cutting-edge application designed to predict water quality, ensuring access to clean and safe water for all. Utilizing a machine learning model built with TensorFlow, AquaScan leverages a FastAPI backend and a React frontend to deliver real-time predictions on water potability based on various water quality parameters.
-
 ## Problem Statement
 
 Water quality is a critical issue as contaminated water can lead to severe health problems and diseases. By monitoring and predicting water quality, AquaScan helps prevent the consumption and use of dirty water, thereby safeguarding public health and reducing medical expenses associated with waterborne illnesses.
 
 ## The Dataset
 
-The dataset used for this project is `water_potability.csv`, which contains 3,276 rows and 10 columns. The key features of the dataset include:
+The dataset used for this project is `water_potability.csv`, which contains 3,276 rows and 10 columns. With 9 key features and one target, the dataset columns include:
 
 - PH
 - Hardness
@@ -44,6 +44,8 @@ The dataset used for this project is `water_potability.csv`, which contains 3,27
 
 AquaScan is trained to predict the potability of water based on the first nine features.
 
+Souce: [Kaggle](https://www.kaggle.com/datasets/uom190346a/water-quality-and-potability?select=water_potability.csv)
+
 ## The Solution
 
 AquaScan processes the input water quality parameters and predicts whether the water is potable or not. This prediction is made using a Multi-Layer Perceptron Neural Network (MLP) model, which has been trained on historical water quality data.
@@ -56,10 +58,12 @@ The architecture of the machine learning model is a Multi-Layer Perceptron (MLP)
 - Two hidden layers
 - One output layer
 
+![Model Architecture](model_architcture/IMG_3627.png)
+
 ### Choice of Activations, Regularizers, and Optimizers
 
 - **Activation Functions:** ReLU for the hidden layers and Sigmoid for the output layer.
-- **Regularization:** L2 regularization, early stopping, confusion matrix, and dropouts were employed to enhance model performance and prevent overfitting.
+- **Regularization:** L2 regularization, confusion matrix, and dropouts were employed to enhance model performance and prevent overfitting.
 - **Optimizer:** Adam optimizer.
 
 ## Performance Analysis
@@ -70,10 +74,10 @@ The performance of the model is evaluated based on its loss and accuracy metrics
 - **Metrics:** Accuracy
 
 Performance statistics:
-- Accuracy: 0.6908
-- Loss: 0.5948
-- Validation Accuracy: 0.6585
-- Validation Loss: 0.6135
+- Accuracy: 79.97%
+- Loss: 0.5039
+- Validation Accuracy: 70.88%
+- Validation Loss: 0.7022
 
 ## Why We Chose Our Model
 
@@ -103,6 +107,9 @@ AquaScan utilizes the following libraries and frameworks:
 - TensorFlow
 - Matplotlib
 - Scikit-learn (sklearn)
+- Seaborn
+- FastAPI
+- Pydantic
 
 ## FastAPI
 
