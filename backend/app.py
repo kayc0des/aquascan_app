@@ -2,8 +2,24 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import numpy as np
 import tensorflow as tf
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+origins = [
+    "https://localhost",
+    "https://loalhost:8080",
+    "https://aquascan.onrender.com"
+]
+
+# Define allowed origins
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods = ["GET", "POST", "PUT", "DELETE"],
+    allow_headers = ["Authorization", "Content-Type"]
+)
 
 model_filepath = "backend/model/model.h5"
 # Load the trained model
