@@ -63,8 +63,9 @@ The architecture of the machine learning model is a Multi-Layer Perceptron (MLP)
 ### Choice of Activations, Regularizers, and Optimizers
 
 - **Activation Functions:** ReLU for the hidden layers and Sigmoid for the output layer.
-- **Regularization:** L2 regularization, confusion matrix, and dropouts were employed to enhance model performance and prevent overfitting.
+- **Regularization:** L2 regularization and dropouts were employed to enhance model performance and prevent overfitting.
 - **Optimizer:** Adam optimizer.
+- **Error Analysis:** Confusion matrix.
 
 ## Performance Analysis
 
