@@ -58,7 +58,7 @@ The architecture of the machine learning model is a Multi-Layer Perceptron (MLP)
 - Two hidden layers
 - One output layer
 
-![Model Architecture](model_architcture/IMG_3627.png)
+![Model Architecture](model_architecture/IMG_3627.png)
 
 ### Choice of Activations, Regularizers, and Optimizers
 
